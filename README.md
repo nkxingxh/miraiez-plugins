@@ -16,11 +16,15 @@ miraiez-pluglins 是高效率QQ机器人``mirai``的``php``框架``miraiez``的�
 4. 请务必仔细阅读这个示例插件的说明, 并对本框架的核心函数有一定的了解 (请查看 core.php、easyMirai.php、pluginsHelp.php 等文件,后续会有比较完备的Wiki供开发者参考)
 
 ## 收入方式 Function
-### 方式一 : 通过 Issue 
+我们提供多种提供公共插件的方式：
+### 方式一 : 直接添加进入本仓库
+直接在本仓库添加你的插件,在经过审查通过后会合并入本仓库。
+
+### 方式二 : 通过 Issue 
 可以在此仓库中发出 Issue 并提供你插件源码的地址(可以为Github,Gitee仓库等等)
 如果符合收入条件,则我们会直接将你的插件收入
 
-### 方式二 : 联系我们
+### 方式三 : 联系我们
  
 NKXingXH : [NKXingXH](https://github.com/nkxingxh) </br>
 Mr-XieXuan : [Mr-XieXuan](https://github.com/MR-XieXuan) </br>
