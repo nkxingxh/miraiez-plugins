@@ -1,4 +1,4 @@
-# miraiez-pluglins
+# miraiez-plugins
 
 ## 简介 / Introduction 
 
