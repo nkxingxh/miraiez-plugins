@@ -29,52 +29,27 @@ pluginRegister(new class extends pluginParent   //建议继承 pluginParent 插�
         parent::__construct();
     }
 
-    /**
-     * 插件初始化函数
-     * 请不要在该函数中做除 hookRegister 外的任何操作
-     * 返回 false 则表示插件初始化失败, 该插件将不会在后续被调用 (即使已经使用 hookRegister 注册 消息、事件或请求等 的处理函数)
-     */
     public function _init()
     {
-        /**
-         * hookRegister
-         * 注册消息、事件或请求等的处理函数
-         * 第一个参数 (func) 被注册的函数名称
-         * 从第二个参数开始到最后一个参数 (...$types) 为消息/事件类型,
-         * 
-         * 具体消息类型、事件类型请参阅 mirai-api-http 文档:
-         * https://github.com/project-mirai/mirai-api-http/blob/master/docs/api/MessageType.md
-         * https://github.com/project-mirai/mirai-api-http/blob/master/docs/api/EventType.md
-         */
         hookRegister('hook', 'FriendMessage', 'GroupMessage', 'StrangerMessage');
         return true;
     }
 
-    /**
-     * hook 处理函数
-     * 这个函数被注册了, 所以必须设置为 公共 (public) 函数
-     * 否则调用时会出错
-     */
     public function hook($_DATA)
     {
-        /**
-         * $_PlainText 全局变量, 类型为 字符串 (String), 存储消息的纯文本内容，使用前需要先通过 global 声明或者通过 $GLOBALS['_PlainText'] 调用
-         * $_ImageUrl 全局变量，类型为 数组 (Array), 成员类型为 字符串 (String), 存储消息中图片的链接，使用前需要先通过 global 声明或者通过 $GLOBALS['_ImageUrl'] 调用
-         * $_At 全局变量，类型为 数组 (Array), 成员类型为 整型 (int), 存储消息中被 @ 用户的 QQ 号，使用前需要先通过 global 声明或者通过 $GLOBALS['_At'] 调用
-         */
-        global $_PlainText, $_At, $_ImageUrl;
+        global $_PlainText;
         if ($this->get_command($_PlainText, ">c")) {
             $body = $this->cut_command($_PlainText, ">c");
-            $data = array(
+            $data = http_build_query(array(
                 "code" => $body,
                 "token" => "b6365362a90ac2ac7098ba52c13e352b",
                 "language" => "7",
                 "fileext" => "c",
                 "stdin" => ""
-            );
+            ));
             $msg = CurlPOST($data, "https://tool.runoob.com/compile2.php");
             $msg = json_decode($msg);
-            if (is_null($msg)) {
+            if (empty($msg)) {
                 replyMessage("维护中......");
                 return 1;
             }
@@ -88,16 +63,16 @@ pluginRegister(new class extends pluginParent   //建议继承 pluginParent 插�
 
         if ($this->get_command($_PlainText, ">python")) {
             $body = $this->cut_command($_PlainText, ">python");
-            $data = array(
+            $data = http_build_query(array(
                 "code" => $body,
                 "token" => "b6365362a90ac2ac7098ba52c13e352b",
                 "language" => "15",
                 "fileext" => "py3",
                 "stdin" => ""
-            );
+            ));
             $msg = CurlPOST($data, "https://tool.runoob.com/compile2.php");
             $msg = json_decode($msg);
-            if (is_null($msg)) {
+            if (empty($msg)) {
                 replyMessage("维护中......");
                 return 1;
             }
@@ -120,7 +95,7 @@ pluginRegister(new class extends pluginParent   //建议继承 pluginParent 插�
             );
             $msg = CurlPOST($data, "https://tool.runoob.com/compile2.php");
             $msg = json_decode($msg);
-            if (is_null($msg)) {
+            if (empty($msg)) {
                 replyMessage("维护中......");
                 return 1;
             }
