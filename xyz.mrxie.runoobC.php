@@ -21,7 +21,7 @@ pluginRegister(new class extends pluginParent   //建议继承 pluginParent 插�
     const _pluginAuthor = "mrxie";                       //插件作者
     const _pluginDescription = "运行代码";                  //插件描述
     const _pluginPackage = "xyz.mrxie.runoobC";    //插件包名 必须是唯一的 (如已加载相同包名的插件，将跳过当前插件类，不予加载)
-    const _pluginVersion = "0.0.1";                         //插件版本
+    const _pluginVersion = "0.1.0";                         //插件版本
 
     //构造函数, 目前没有用到，写不写这个函数都可以
     public function __construct()
