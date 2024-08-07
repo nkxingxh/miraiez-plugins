@@ -29,6 +29,7 @@
 直接提交 Pull request, 在审核通过后会并入本仓库。
 
 #### 2. Issue
+
 可以在此仓库中提出 Issue 并提供你插件源码的仓库地址 （可以是 Github, Gitee 等)。
 
 如果符合条件, 则我们会将你的插件收录。
@@ -41,10 +42,18 @@ Mr-XieXuan : [Github](https://github.com/MR-XieXuan) </br>
 
 ## 插件列表 / Plugins
 
-### 示例插件
+以下插件都在 **MiraiEz v2** 版本中受支持
 
-#### NKXingXh
-
-* > top.nkxingxh.examplePlugin.php
-
-以上插件都在 **MiraiEz v2** 版本中受支持
+| 作者 | 名称 | 说明 | 包名 |
+|------|-----|------|------|
+| [NKXingXh](https://github.com/nkxingxh) | examplePlugin | 示例插件 | top.nkxingxh.examplePlugin |
+| [NKXingXh](https://github.com/nkxingxh) | MiraiEzCommand | MiraiEz 命令支持前置插件 | top.nkxingxh.MiraiEzCommand |
+| [NKXingXh](https://github.com/nkxingxh) | exampleCmdReg | 示例命令注册插件 | top.nkxingxh.exampleCmdReg |
+| [NKXingXh](https://github.com/nkxingxh) | 自动处理事件请求 | 根据配置自动处理对应事件的请求 | top.nkxingxh.miraiez.autoRespRequestEvent |
+| [MR-XieXuan](https://github.com/MR-XieXuan) | runoobC | 运行代码 | xyz.mrxie.runoobC |
+| [Shiroi](https://github.com/hcr707305003) | baiduSearch | 百度搜索 | top.shiroi.baiduSearch |
+| [Shiroi](https://github.com/hcr707305003) | moreImage | 获取图片~摩多摩多 | top.shiroi.moreImage |
+| [Shiroi](https://github.com/hcr707305003) | poetry | 诗词 | top.shiroi.poetry |
+| [Shiroi](https://github.com/hcr707305003) | replaceMasterBeat | 代替主人反击插件 | top.shiroi.replaceMasterBeat |
+| [smikuy](https://github.com/Hatsune-Miku-001) | MainPlugin | 群管主插件 | com.smikuy.main |
+| [smikuy](https://github.com/Hatsune-Miku-001) | SQLPlugin | 群管插件数据库前置 | com.smikuy.sql |
